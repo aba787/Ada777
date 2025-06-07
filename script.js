@@ -1,6 +1,18 @@
+// تحديد الأقسام وروابط التنقل
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
+// زر القائمة والقائمة نفسها
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+// تفعيل زر القائمة في الجوال
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle('bx-x');
+  navbar.classList.toggle('active');
+};
+
+// عند التمرير، نفعل رابط القسم ونخفي القائمة
 window.onscroll = () => {
   let top = window.scrollY;
 
@@ -23,8 +35,11 @@ window.onscroll = () => {
 
   let header = document.querySelector('header');
   header.classList.toggle('sticky', top > 100);
-};
 
+  // نخفي القائمة في الجوال عند التمرير
+  menuIcon.classList.remove('bx-x');
+  navbar.classList.remove('active');
+};
 
 // إعدادات ScrollReveal
 ScrollReveal({

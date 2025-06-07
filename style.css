@@ -555,3 +555,22 @@ span {
 }
 
 
+/* ============ تفعيل الرابط النشط في الشريط العلوي ============ */
+header nav a.active {
+  color: #FFD700; /* اللون الذهبي */
+  font-weight: bold;
+  border-bottom: 2px solid #FFD700;
+  transition: 0.3s;
+}
+
+/* ============ شريط علوي ثابت عند التمرير ============ */
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff; /* أو أي لون خلفية تبغينه */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: 0.3s ease-in-out;
+}

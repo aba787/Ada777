@@ -58,6 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
     delay: 200
   });
 
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+
+function closeMenu() {
+  document.getElementById("menu").classList.remove("active");
+}
+  
   ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
   ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
   ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });

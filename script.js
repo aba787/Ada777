@@ -53,3 +53,11 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+
+// إغلاق القائمة لما يضغط المستخدم على أي رابط من روابط التنقل
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+  });
+});
